@@ -1,3 +1,6 @@
+// Inicializa um array para armazenar os números já sorteados
+var numerosSorteados = [];
+
 function realizarSorteio() {
     var minimo = parseInt(document.getElementById('minimo').value);
     var maximo = parseInt(document.getElementById('maximo').value);
@@ -7,7 +10,18 @@ function realizarSorteio() {
         return;
     }
 
-    var numeroSorteado = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+    if (numerosSorteados.length === (maximo - minimo + 1)) {
+        alert('Todos os números já foram sorteados. Reinicie o sorteio.');
+        return;
+    }
+
+    var numeroSorteado;
+
+    do {
+        numeroSorteado = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+    } while (numerosSorteados.includes(numeroSorteado));
+
+    numerosSorteados.push(numeroSorteado);
 
     document.getElementById('resultado').innerHTML = numeroSorteado;
 }

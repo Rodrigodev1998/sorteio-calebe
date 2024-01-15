@@ -24,7 +24,7 @@ body {
     position: relative;
     text-align: center;
     z-index: 1; 
-    background-color: #ffffffcd;
+    background-color: rgba(234, 237, 19, 0.939);
     padding-inline-start: 2rem;
     padding-inline-end: 2rem;
     padding-bottom: 20px;
@@ -32,12 +32,12 @@ body {
 }
 
 h1{
-    font-size: 8rem;
-    color: #3498db;
+    font-size: 4rem;
+    color: #073a5c;
 }
 
 .card {
-    background-color: #3498db;
+    background-color: #073a5c;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -59,12 +59,32 @@ button {
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
-    color: #3498db;
+    color: #073a5c;
     background-color: rgba(210, 212, 51, 0.315);
-    font-size: 50rem;
+    font-size: 25rem;
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards;
 }
+
+.image-container {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    margin: 0 auto 10px;
+    padding-top: 10px; /* Centraliza e adiciona margem abaixo */
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around; /* Distribui as imagens igualmente ao longo da linha */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 10px;
+}
+
 
 @keyframes fadeIn {
     from {
